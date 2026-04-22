@@ -1,11 +1,12 @@
 Package: outcrossSimulator
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Simulate Outcross Breeding
+Version: 0.0.0.01
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Daniel", "Gatti", , "dan.gatti@jax.org", role = c("aut", "cre"))
+Description: This package allows the user to create a breeding population of a specified number of breeding pairs comprised from a specified number of inbred founders. It was designed for diploid organisms. It creates a breeding funnel from a randomized ordering of the founders and produces a pair of G2-F1 mice for each funnel. A population of breeding pairs can be created in this manner and then be fed into the outcrossing algorithm. We use the xoi R package to estimate the number and position of crossovers from each transmitted chromotid at each generation. We provide functions to aggregate allele frequency, crossovers, and inbreeding at each generation. 
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
+RoxygenNote: 7.2.3
+Imports: 
+    xoi
