@@ -26,6 +26,6 @@ n_mkr = 100
 markers = lapply(1:2, function(z) { setNames(1:n_mkr, paste0('mkr', 1:n_mkr)) })
 names(markers) = c(1, 'X')
 founders = 1:4
-funnel = create_breeding_funnel(sample(founders), markers = markers, num_f1_pairs = 2)
+funnel = create_breeding_funnel(sample(founders), markers = markers)
 mating_pair = breed_funnel(funnel, markers)
 }

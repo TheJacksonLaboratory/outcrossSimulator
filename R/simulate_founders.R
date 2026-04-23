@@ -26,10 +26,7 @@ simulate_founders = function(n_pairs = 175, n_founders = 8, markers) {
   # Create founder numbers.
   founder_numbers = 1:n_founders
   
-  # Get number of F1 pairs.
-  num_f1_pairs = max(n_founders / 4, 1)
-  
-  # Create the data structure to hold the F1 breeders.
+  # Create the data structure to hold the breeders.
   pop = create_pop_list(markers, n_pairs) 
   
   # Get autosomes and Chr X.
@@ -40,7 +37,7 @@ simulate_founders = function(n_pairs = 175, n_founders = 8, markers) {
   # and breeding them.
   for(pair in 1:n_pairs) {
     
-    funnel = create_breeding_funnel(founder_numbers, markers, num_f1_pairs)
+    funnel = create_breeding_funnel(founder_numbers, markers)
     
     # At this point, we have the F1 breeders for the funnel.
     # Next we need to breed them until we have two first generation mice and then

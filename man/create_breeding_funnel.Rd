@@ -2,26 +2,24 @@
 % Please edit documentation in R/create_breeding_funnel.R
 \name{create_breeding_funnel}
 \alias{create_breeding_funnel}
-\title{Create one breeding funnel which combines all founders in a random order and produces one pair of breeders.}
+\title{Create one breeding funnel which combines all founders in a random order.}
 \usage{
-create_breeding_funnel(hap_order, markers, num_f1_pairs)
+create_breeding_funnel(hap_order, markers)
 }
 \arguments{
 \item{hap_order}{character vector with founder haplotypes permuted for this funnel.}
 
 \item{markers}{list containing one chromosome per element. Each element contains a named numeric vector containing marker positions in cM and marker names.}
-
-\item{num_f1_pairs}{integer that is the number of F1 breeding pairs to create.}
 }
 \value{
 list containing one breeding funnel.
 }
 \description{
-Create one breeding funnel which combines all founders in a random order and produces one pair of breeders.
+This function creates pairs of breeders based on the hap_order. The females will have haplotypes from the odd values in hap_order and the males will have haplotypes from the even numbers. There will be n_founders / 2 breeding pairs.
 }
 \examples{
 markers = lapply(1:2, function(z) { setNames(1:10, paste0('mkr', 1:10)) })
 names(markers) = c(1, 'X')
 founders = 1:4
-funnel = create_breeding_funnel(sample(founders), markers = markers, num_f1_pairs = 2)
+funnel = create_breeding_funnel(sample(founders), markers = markers)
 }

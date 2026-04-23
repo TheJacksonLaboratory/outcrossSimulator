@@ -47,8 +47,8 @@ count_crossovers = function(pop) {
   } # for(chr)
   
   # Females: Chr X
-  h1 = apply(diff(pop[[chr]][['females']][,'hap1',]) != 0, 2, which)
-  h2 = apply(diff(pop[[chr]][['females']][,'hap2',]) != 0, 2, which)
+  h1 = apply(diff(pop[[x]][['females']][,'hap1',]) != 0, 2, which)
+  h2 = apply(diff(pop[[x]][['females']][,'hap2',]) != 0, 2, which)
   xo[f_names, x] = sapply(h1, length) + sapply(h2, length)
   
   # Males: Chr X

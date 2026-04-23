@@ -14,7 +14,7 @@
 #' markers = lapply(1:2, function(z) { setNames(1:n_mkr, paste0('mkr', 1:n_mkr)) })
 #' names(markers) = c(1, 'X')
 #' founders = 1:4
-#' breeders = create_breeding_funnel(hap_order = 1:4, markers, num_f1_pairs = 2)
+#' breeders = create_breeding_funnel(hap_order = 1:4, markers)
 #' one_chr = breed_one_chr(breeders[[1]], markers[[1]])
 breed_one_chr = function(breeders, mkr, nu = 11, p = 0.05) {
   
