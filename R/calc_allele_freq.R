@@ -12,6 +12,8 @@ allele_count_fxn = function(z, founder_numbers) {
   colSums(sapply(founder_numbers, '==', z))
   
 } # allele_count_fxn()
+
+
 #' Reshape allele frequencies.
 #'
 #' Once the allele frequencies have been calculated, reshape them into three dimensional numerric arrays.

@@ -13,10 +13,10 @@
 #' pop4chr = create_one_chr(mkr = markers, n_pairs = 10)
 create_one_chr = function(mkr, n_pairs) {
   
-  return(list(females = array(0, dim = c(length(mkr), 2, n_pairs), 
+  return(list(females = array(0L, dim = c(length(mkr), 2, n_pairs), 
                               dimnames = list(names(mkr), c('hap1', 'hap2'), 
                                               paste0('F', 1:n_pairs))),
-              males   = array(0, dim = c(length(mkr), 2, n_pairs), 
+              males   = array(0L, dim = c(length(mkr), 2, n_pairs), 
                               dimnames = list(names(mkr), c('hap1', 'hap2'), 
                                               paste0('M', 1:n_pairs)))))
   

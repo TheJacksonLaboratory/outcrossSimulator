@@ -46,7 +46,7 @@ calc_block_size = function(pop, markers) {
     fem = pop[[chr]][['females']]
     
     # Place -1 in first and last marker to get start and end of chromosome.
-    tmp = array(-1, dim = c(dim(fem) + c(1,0,0)), 
+    tmp = array(-1L, dim = c(dim(fem) + c(1,0,0)), 
                 dimnames = list(c('start', rownames(fem)), colnames(fem), dimnames(fem)[[3]]))
     tmp[2:(nrow(tmp) - 1),,] = fem[-nrow(fem),,]
     
@@ -65,7 +65,7 @@ calc_block_size = function(pop, markers) {
     mal = pop[[chr]][['males']]
     
     # Place -1 in first and last marker to get start and end of chromosome.
-    tmp = array(-1, dim = c(dim(mal) + c(1,0,0)), 
+    tmp = array(-1L, dim = c(dim(mal) + c(1,0,0)), 
                 dimnames = list(c('start', rownames(mal)), colnames(mal), dimnames(mal)[[3]]))
     tmp[2:(nrow(tmp) - 1),,] = mal[-nrow(mal),,]
     
@@ -86,7 +86,7 @@ calc_block_size = function(pop, markers) {
   fem = pop[[x]][['females']]
   
   # Place -1 in first and last marker to get start and end of chromosome.
-  tmp = array(-1, dim = c(dim(fem) + c(1,0,0)), 
+  tmp = array(-1L, dim = c(dim(fem) + c(1,0,0)), 
               dimnames = list(c('start', rownames(fem)), colnames(fem), dimnames(fem)[[3]]))
   tmp[2:(nrow(tmp) - 1),,] = fem[-nrow(fem),,]
   
@@ -108,7 +108,7 @@ calc_block_size = function(pop, markers) {
     mal = pop[[x]][['males']]
     
     # Place -1 in first and last marker to get start and end of chromosome.
-    tmp = array(-1, dim = c(dim(mal) + c(1,0,0)), 
+    tmp = array(-1L, dim = c(dim(mal) + c(1,0,0)), 
                 dimnames = list(c('start', rownames(mal)), colnames(mal), dimnames(mal)[[3]]))
     tmp[2:(nrow(tmp) - 1),,] = mal[-nrow(mal),,]
     
@@ -127,7 +127,7 @@ calc_block_size = function(pop, markers) {
     mal = pop[[x]][['males']]
     
     # Place -1 in first and last marker to get start and end of chromosome.
-    tmp = array(-1, dim = c(dim(mal) + c(1,0,0)), 
+    tmp = array(-1L, dim = c(dim(mal) + c(1,0,0)), 
                 dimnames = list(c('start', rownames(mal)), colnames(mal), dimnames(mal)[[3]]))
     tmp[2:(nrow(tmp) - 1),,] = mal[-nrow(mal),,]
     
